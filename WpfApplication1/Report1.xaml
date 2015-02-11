@@ -1,0 +1,380 @@
+﻿<Window x:Class="WpfApplication1.Report1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Результаты МЭК (таблица 3.1)" Height="600" Width="862" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="80*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel
+			Grid.Row="0" Grid.Column="0"
+			 Orientation="Vertical" >
+            <TextBlock Text="Результаты Мэдико-экономического контроля" FontSize="18" HorizontalAlignment="Center" ></TextBlock>
+            
+            <StackPanel Orientation="Horizontal"  >
+                <TextBlock Text="Период формирования c" Margin="7 0 7 0" ></TextBlock>
+                <DatePicker Name="DateBeg" Margin="7 0 7 0" ></DatePicker>
+                <TextBlock Text=" по " Margin="7 0 7 0" ></TextBlock>
+                <DatePicker Name="DateEnd" Margin="7 0 7 0" ></DatePicker>
+                <Button Name="CreateReport" Content="Заполнить данные" Margin="7 0 7 0" ></Button>
+                <Button Name="CreateDocx" Content="Просмотр отчета"></Button>
+            </StackPanel>
+        </StackPanel>
+
+        <TabControl Grid.Row="1"   Grid.Column="0">
+        
+                <TabItem Header="Данные по СМО">
+                    <Border  BorderBrush="Black" Background="Bisque" Padding="15 0 15 15" Margin="5 5 5 5" CornerRadius="8" >
+            <ScrollViewer  VerticalScrollBarVisibility="Visible">
+        <Grid	 ShowGridLines="True">
+          
+                <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60" ></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                     
+
+                    </Grid.ColumnDefinitions>
+                <TextBlock
+					Grid.Column="0" Height="50" TextWrapping="Wrap" ></TextBlock>
+                <TextBlock
+					Grid.Column="1"
+					Grid.Row="0" Height="50"
+					Text="Амбулаторно поликнической помощи"  FontSize="12" TextWrapping="Wrap"></TextBlock>
+                <TextBlock
+					Grid.Column="2"
+					Grid.Row="0" Height="50"
+					Text="Стационарной медицинской помощи" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                <TextBlock
+					Grid.Column="3"
+					Grid.Row="0" Height="50"
+					Text="Стационарно замещающей  помощи" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                <TextBlock
+					Grid.Column="4"
+					Grid.Row="0" Height="50"
+					Text="Скорой медицинской  помощи вне медицинской организации" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                <TextBlock
+					Grid.Column="5"
+					Grid.Row="0" TextWrapping="Wrap" FontSize="12" Height="50"
+					Text="Всего"></TextBlock>
+            
+            
+             <TextBlock
+					Grid.Column="0" Height="50" TextWrapping="Wrap" ></TextBlock>
+                <TextBlock
+					Grid.Column="1"
+					Grid.Row="0" Height="50"
+					Text="Амбулаторно поликнической помощи"  FontSize="12" TextWrapping="Wrap"></TextBlock>
+                <TextBlock
+					Grid.Column="2"
+					Grid.Row="0" Height="50"
+					Text="Стационарной медицинской помощи" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                <TextBlock
+					Grid.Column="3"
+					Grid.Row="0" Height="50"
+					Text="Стационарно замещающей  помощи" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                <TextBlock
+					Grid.Column="4"
+					Grid.Row="0" Height="50"
+					Text="Скорой медицинской  помощи вне медицинской организации" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                <TextBlock
+					Grid.Column="5"
+					Grid.Row="0" TextWrapping="Wrap" FontSize="12" Height="50"
+					Text="Всего"></TextBlock>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                <TextBlock
+					Text="Количество предьявленных к оплате счетов за оказанную медицинскую помощь"
+					Grid.Row="1"  TextWrapping="Wrap" FontSize="12"
+					Grid.Column="0"></TextBlock>
+                <TextBlock
+					Text="Всего было выявлено счетов содрежащих нарушения" FontSize="12"
+					Grid.Row="2"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+                <TextBlock
+					Text="Выявлено нарушений в оформлении и предьявления на оплату счетов и реестров счетов в т.ч." FontSize="12"
+					Grid.Row="3"  TextWrapping="Wrap" 
+					Grid.Column="0"></TextBlock>
+                <TextBlock
+					Text="Нарушения связанные с оформлением счетов и реестров счетов" FontSize="12"
+					Grid.Row="4"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+            <TextBlock
+					Text="Нарушения связанные спринадлежностью ЗЛ к СМО" FontSize="12"
+					Grid.Row="5"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+            <TextBlock
+					Text="Нарушения связанные с включением в реестр МП, не входящей в ОМС" FontSize="12"
+					Grid.Row="6"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+            <TextBlock
+					Text="Нарушения связанные с необоснованными применением тарифа на МП" FontSize="12"
+					Grid.Row="7"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+            <TextBlock
+					Text="Нарушения связанные с вколючением в реестр-счетов нелицинзированной видов МП" FontSize="12"
+					Grid.Row="8"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+            <TextBlock
+					Text="Нарушения связанные с повторным или необоснованным включением в реестр-счетов МП" FontSize="12"
+					Grid.Row="9"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+            <TextBlock
+					Text="Включения в счет амбулаторных посещений в период пребывания ЗЛ в круглосуточном стационаре" FontSize="12"
+					Grid.Row="10"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+            <TextBlock
+					Text="включение в счет пациенто-дней пребывания застрахованного лица в дневном стационаре в период пребывания пациента в круглосуточном стационаре" FontSize="12"
+					Grid.Row="11"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+            <TextBlock
+					Text="повторное выставление счета на оплату случаев оказанной медицинской помощи, которые были оплачены ранее " FontSize="12"
+					Grid.Row="12"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+            <TextBlock
+					Text="прочие нарушения в соответствии с Перечнем" FontSize="12"
+					Grid.Row="13"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+            <TextBlock
+					Text="Количество принятых к оплате счетов  за оказанную     
+медицинскую  помощь по  территориальной программе ОМС (тыс.)    
+
+" FontSize="12"
+					Grid.Row="14"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+        </Grid>
+
+        </ScrollViewer>
+        </Border>
+                </TabItem>
+      
+            
+            <TabItem Header="Данные по ТФОМС">
+                <Border  BorderBrush="Black" Background="Bisque" Padding="15 0 15 15" Margin="5 5 5 5" CornerRadius="8" >
+                    <ScrollViewer  VerticalScrollBarVisibility="Visible">
+                        <Grid	 ShowGridLines="True">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60" ></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+
+
+
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+					Grid.Column="0" Height="50" TextWrapping="Wrap" ></TextBlock>
+                            <TextBlock
+					Grid.Column="1"
+					Grid.Row="0" Height="50"
+					Text="Амбулаторно поликнической помощи"  FontSize="12" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock
+					Grid.Column="2"
+					Grid.Row="0" Height="50"
+					Text="Стационарной медицинской помощи" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                            <TextBlock
+					Grid.Column="3"
+					Grid.Row="0" Height="50"
+					Text="Стационарно замещающей  помощи" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                            <TextBlock
+					Grid.Column="4"
+					Grid.Row="0" Height="50"
+					Text="Скорой медицинской  помощи вне медицинской организации" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                            <TextBlock
+					Grid.Column="5"
+					Grid.Row="0" TextWrapping="Wrap" FontSize="12" Height="50"
+					Text="Всего"></TextBlock>
+
+
+                            <TextBlock
+					Grid.Column="0" Height="50" TextWrapping="Wrap" ></TextBlock>
+                            <TextBlock
+					Grid.Column="1"
+					Grid.Row="0" Height="50"
+					Text="Амбулаторно поликнической помощи"  FontSize="12" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock
+					Grid.Column="2"
+					Grid.Row="0" Height="50"
+					Text="Стационарной медицинской помощи" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                            <TextBlock
+					Grid.Column="3"
+					Grid.Row="0" Height="50"
+					Text="Стационарно замещающей  помощи" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                            <TextBlock
+					Grid.Column="4"
+					Grid.Row="0" Height="50"
+					Text="Скорой медицинской  помощи вне медицинской организации" FontSize="12" TextWrapping="Wrap" ></TextBlock>
+                            <TextBlock
+					Grid.Column="5"
+					Grid.Row="0" TextWrapping="Wrap" FontSize="12" Height="50"
+					Text="Всего"></TextBlock>
+
+
+
+
+
+
+
+
+
+
+                            <TextBlock
+					Text="Количество предьявленных к оплате счетов за оказанную медицинскую помощь"
+					Grid.Row="1"  TextWrapping="Wrap" FontSize="12"
+					Grid.Column="0"></TextBlock>
+                            <TextBlock
+					Text="Всего было выявлено счетов содрежащих нарушения" FontSize="12"
+					Grid.Row="2"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+                            <TextBlock
+					Text="Выявлено нарушений в оформлении и предьявления на оплату счетов и реестров счетов в т.ч." FontSize="12"
+					Grid.Row="3"  TextWrapping="Wrap" 
+					Grid.Column="0"></TextBlock>
+                            <TextBlock
+					Text="Нарушения связанные с оформлением счетов и реестров счетов" FontSize="12"
+					Grid.Row="4"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+                            <TextBlock
+					Text="Нарушения связанные спринадлежностью ЗЛ к СМО" FontSize="12"
+					Grid.Row="5"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+                            <TextBlock
+					Text="Нарушения связанные с включением в реестр МП, не входящей в ОМС" FontSize="12"
+					Grid.Row="6"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+                            <TextBlock
+					Text="Нарушения связанные с необоснованными применением тарифа на МП" FontSize="12"
+					Grid.Row="7"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+                            <TextBlock
+					Text="Нарушения связанные с вколючением в реестр-счетов нелицинзированной видов МП" FontSize="12"
+					Grid.Row="8"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+                            <TextBlock
+					Text="Нарушения связанные с повторным или необоснованным включением в реестр-счетов МП" FontSize="12"
+					Grid.Row="9"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+                            <TextBlock
+					Text="Включения в счет амбулаторных посещений в период пребывания ЗЛ в круглосуточном стационаре" FontSize="12"
+					Grid.Row="10"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+                            <TextBlock
+					Text="включение в счет пациенто-дней пребывания застрахованного лица в дневном стационаре в период пребывания пациента в круглосуточном стационаре" FontSize="12"
+					Grid.Row="11"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+                            <TextBlock
+					Text="повторное выставление счета на оплату случаев оказанной медицинской помощи, которые были оплачены ранее " FontSize="12"
+					Grid.Row="12"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+                            <TextBlock
+					Text="прочие нарушения в соответствии с Перечнем" FontSize="12"
+					Grid.Row="13"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+
+
+                            <TextBlock
+					Text="Количество принятых к оплате счетов  за оказанную     
+медицинскую  помощь по  территориальной программе ОМС (тыс.)    
+
+" FontSize="12"
+					Grid.Row="14"  TextWrapping="Wrap"
+					Grid.Column="0"></TextBlock>
+                        </Grid>
+
+                    </ScrollViewer>
+
+
+                </Border>
+            </TabItem>
+        </TabControl>
+
+
+
+        <Grid Grid.Row="3"></Grid>
+        </Grid>
+       
+ 
+</Window>
