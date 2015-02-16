@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace WpfApplication1
 {
@@ -26,6 +27,25 @@ namespace WpfApplication1
         private void Window_Closed(object sender, EventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void CreateDocx_Click(object sender, RoutedEventArgs e)
+        {
+
+            Dictionary<string,string> dic = new Dictionary<string,string>();
+            dic.Add("#A1","Мы все умерем");
+            dic.Add("#A2", "Но чуть позже");
+
+
+
+
+
+            ExportToDocx r = new ExportToDocx();
+            r.InputDataMek(dic, System.IO.Directory.GetCurrentDirectory() + "/report/Rendering Test.docx");
+
+            ShowDocument show = new ShowDocument();
+            show.filename = System.IO.Directory.GetCurrentDirectory() + "/report/Rendering Test.docx";
+            show.Show();
         }
     }
 }

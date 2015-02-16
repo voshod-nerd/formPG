@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApplication1.ShowDocument"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ShowDocument" Height="372" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="90*"></RowDefinition>   
+        </Grid.RowDefinitions>
+        
+        <Border Grid.Row="0" CornerRadius="10" Background="Aquamarine" >
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Тут должно быть какое то название"> </TextBlock>
+                <Button Name="Print" Width="150" Content="Печать" Margin="5 5 5 5" Click="Print_Click"></Button>
+                <Button Name="Save" Width="150" Content="Сохрать отчет" Margin="5 5 5 5" ></Button>
+            </StackPanel>
+        </Border>
+        <FlowDocumentReader Grid.Row="1" x:Name="flowDocumentReader" ViewingMode="Page" />
+    </Grid>
+</Window>

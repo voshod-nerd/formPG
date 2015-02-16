@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocX">
+      <HintPath>bin\Debug\DocX.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,9 +58,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DocxReader.cs" />
+    <Compile Include="DocxToFlowDocumentConverter.cs" />
+    <Compile Include="ExportToDocx.cs" />
     <Compile Include="RepMekClass.cs" />
     <Compile Include="Report1.xaml.cs">
       <DependentUpon>Report1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowDocument.xaml.cs">
+      <DependentUpon>ShowDocument.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +81,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Report1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowDocument.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

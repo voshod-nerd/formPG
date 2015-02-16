@@ -14,3 +14,6 @@ C:\Documents and Settings\соколов\мои документы\visual studio
 C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.exe
 C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.pdb
 C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Release\WpfApplication1.exe.config
+C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Release\DocX.dll
+C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\ShowDocument.baml
+C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\ShowDocument.g.cs
