@@ -5,8 +5,11 @@
     <Grid>
         <Border CornerRadius="15"  Background="Cyan" Margin="5 5 5 5" Padding="5 5 5 5" >
         <StackPanel>
-            
-        <TextBlock Grid.Row="0" Text="Выберете тип отчета тип отчета"></TextBlock>
+                <StackPanel Grid.Row="0" Orientation="Vertical" >
+                    <Image Name="Setting"  HorizontalAlignment="Left"   Source="/WpfApplication1;component/bin/Debug/ini.ico" Height="20" Width="66"></Image>
+                    <TextBlock  Text="Выберете тип отчета тип отчета"></TextBlock>
+                </StackPanel>
+                   
         <ComboBox Grid.Row="1">
             <ComboBoxItem>
                 <TextBlock Text="МЭК"></TextBlock>

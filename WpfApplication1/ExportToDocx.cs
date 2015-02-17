@@ -26,13 +26,13 @@ namespace WpfApplication1
                  */
 
 
-                document.ReplaceText("#A1", "Мы все умрем", true, RegexOptions.IgnoreCase);
-                document.ReplaceText("#A2", "Но не все сразу", true, RegexOptions.IgnoreCase);
+                    document.ReplaceText("#A1", "Мы все умрем", true, RegexOptions.IgnoreCase);
+                    document.ReplaceText("#A2", "Но не все сразу", true, RegexOptions.IgnoreCase);
 
                // document.ReplaceText( "#A1", data["#A1"], true, RegexOptions.IgnoreCase);
                // document.ReplaceText("#A2", data["#A2"], true, RegexOptions.IgnoreCase);
-                // Save changes made to this document
-                document.Save();
+               // Save changes made to this document
+                    document.Save();
             }
             // Release this document from memory.
 

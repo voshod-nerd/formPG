@@ -21,7 +21,12 @@
                 <TextBlock Text=" по " Margin="7 0 7 0" ></TextBlock>
                 <DatePicker Name="DateEnd" Margin="7 0 7 0" ></DatePicker>
                 <Button Name="CreateReport" Content="Заполнить данные" Margin="7 0 7 0" ></Button>
-                <Button Name="CreateDocx" Content="Просмотр отчета" Click="CreateDocx_Click"></Button>
+                <Button Name="CreateDocx"  Click="CreateDocx_Click">
+                    <StackPanel Height="31" Width="31" Orientation="Horizontal">
+                        <Image DataContext="{Binding}"  Margin="5 5 5 5" Source="/WpfApplication1;component/bin/Debug/print.ico"></Image>
+                        <TextBlock Text="Просмотр отчета" Padding="3 3 3 3" ></TextBlock>
+                    </StackPanel>       
+                </Button>
             </StackPanel>
         </StackPanel>
 

@@ -48,6 +48,13 @@ namespace WpfApplication1
         private void Print_Click(object sender, RoutedEventArgs e)
         {
             ReadDocx();
+            //
+            PrintDialog dialog = new PrintDialog();
+            if (dialog.ShowDialog() == true)
+            {
+               // dialog.PrintVisual(canvas, "Распечатываем элемент Canvas");
+            }
+
         }
     }
 }

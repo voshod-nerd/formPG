@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mts032.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DocX">
       <HintPath>bin\Debug\DocX.dll</HintPath>
@@ -113,6 +116,15 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="mts032.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\print.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\ini.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
