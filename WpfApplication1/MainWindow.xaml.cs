@@ -26,9 +26,32 @@ namespace WpfApplication1
 
         private void Report_Click(object sender, RoutedEventArgs e)
         {
-            this.Visibility = Visibility.Collapsed;
-            Report1 window = new Report1();
-            window.Show();
+
+             var a = VariantsReport.SelectedItem;
+            ComboBoxItem v = (ComboBoxItem)a;
+
+
+            if (v != null) 
+            {
+
+                if (v.Name == "V1")
+                {
+                    this.Visibility = Visibility.Collapsed;
+                    Report1 window = new Report1();
+                    window.Show();
+                } 
+            }
+
+
+         
+
+        }
+
+        private void Setting_Click(object sender, RoutedEventArgs e)
+        {
+
+            ConnectionSetting form = new ConnectionSetting();
+            form.Show();
 
         }
     }

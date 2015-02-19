@@ -4,8 +4,8 @@
         Title="Результаты МЭК (таблица 3.1)" Height="600" Width="862" Closed="Window_Closed">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"></RowDefinition>
-            <RowDefinition Height="80*"></RowDefinition>
+          <RowDefinition Height="75"></RowDefinition>
+          <RowDefinition Height="80*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -13,18 +13,17 @@
         <StackPanel
 			Grid.Row="0" Grid.Column="0"
 			 Orientation="Vertical" >
-            <TextBlock Text="Результаты Мэдико-экономического контроля" FontSize="18" HorizontalAlignment="Center" ></TextBlock>
-            
-            <StackPanel Orientation="Horizontal"  >
+            <TextBlock Text="Результаты Мэдико-экономического контроля" FontSize="18" HorizontalAlignment="Center" ></TextBlock>           
+            <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Период формирования c" Margin="7 0 7 0" ></TextBlock>
                 <DatePicker Name="DateBeg" Margin="7 0 7 0" ></DatePicker>
-                <TextBlock Text=" по " Margin="7 0 7 0" ></TextBlock>
-                <DatePicker Name="DateEnd" Margin="7 0 7 0" ></DatePicker>
+                <TextBlock Text=" по " Margin="7 0 7 0"></TextBlock>
+                <DatePicker Name="DateEnd" Margin="7 0 7 0"></DatePicker>
                 <Button Name="CreateReport" Content="Заполнить данные" Margin="7 0 7 0" ></Button>
-                <Button Name="CreateDocx"  Click="CreateDocx_Click">
-                    <StackPanel Height="31" Width="31" Orientation="Horizontal">
-                        <Image DataContext="{Binding}"  Margin="5 5 5 5" Source="/WpfApplication1;component/bin/Debug/print.ico"></Image>
-                        <TextBlock Text="Просмотр отчета" Padding="3 3 3 3" ></TextBlock>
+                <Button Name="CreateDocx"  Click="CreateDocx_Click" Width="165"  Margin="0 0 0 0" Padding="0 0 0 0" >
+                    <StackPanel  Orientation="Horizontal">
+                        <Image   HorizontalAlignment="Left" Source="/WpfApplication1;component/bin/Debug/print.ico" Height="30" Width="30"></Image>
+                        <TextBlock Text="Просмотр отчета "></TextBlock>
                     </StackPanel>       
                 </Button>
             </StackPanel>

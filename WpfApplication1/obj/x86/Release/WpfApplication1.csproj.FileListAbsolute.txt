@@ -17,3 +17,5 @@ C:\Documents and Settings\соколов\мои документы\visual studio
 C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Release\DocX.dll
 C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\ShowDocument.baml
 C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\ShowDocument.g.cs
+C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\ConnectionSetting.baml
+C:\Documents and Settings\соколов\мои документы\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\ConnectionSetting.g.cs
