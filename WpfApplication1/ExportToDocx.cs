@@ -11,9 +11,29 @@ namespace WpfApplication1
 {
     class ExportToDocx
     {
+
+
+        public string PrepareFileDocx(string filename) { 
+            // подготовка к созданию временного файла
+            string dir = Directory.GetCurrentDirectory() + "\\temp";
+            if (Directory.Exists(dir)) 
+            {
+                Directory.Delete(dir);
+                Directory.CreateDirectory(dir);
+             
+            } else {Directory.CreateDirectory(dir); }  
+
+           string report=Directory.GetCurrentDirectory()+"\\"+filename;
+           File.Copy(report,dir+"\\"+filename);
+            return  dir+"\\"+filename;
+        }
+        
        public void InputDataMek(Dictionary<string,string> data,string filename) 
-        {   
-            //string fileDir= Directory.GetCurrentDirectory()+"/report/MEK.docx";
+        {
+
+           filename= PrepareFileDocx(filename);  
+           
+
 
 
             using (DocX document = DocX.Load(filename))
@@ -26,7 +46,7 @@ namespace WpfApplication1
                  */
 
 
-                    document.ReplaceText("#A1", "Мы все умрем", true, RegexOptions.IgnoreCase);
+                    document.ReplaceText("#A1", "Мы все умрем", false, RegexOptions.IgnoreCase);
                     document.ReplaceText("#A2", "Но не все сразу", true, RegexOptions.IgnoreCase);
 
                // document.ReplaceText( "#A1", data["#A1"], true, RegexOptions.IgnoreCase);

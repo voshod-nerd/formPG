@@ -36,15 +36,11 @@ namespace WpfApplication1
             dic.Add("#A1","Мы все умерем");
             dic.Add("#A2", "Но чуть позже");
 
-
-
-
-
             ExportToDocx r = new ExportToDocx();
-            r.InputDataMek(dic, System.IO.Directory.GetCurrentDirectory() + "/report/Rendering Test.docx");
+            r.InputDataMek(dic,"ME1.docx");
 
             ShowDocument show = new ShowDocument();
-            show.filename = System.IO.Directory.GetCurrentDirectory() + "/report/Rendering Test.docx";
+            show.filename = System.IO.Directory.GetCurrentDirectory() + "/temp/ME1.docx";
             show.Show();
         }
     }
