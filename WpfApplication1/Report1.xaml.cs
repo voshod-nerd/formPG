@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
+using System.Data;
 
 namespace WpfApplication1
 {
@@ -19,6 +20,9 @@ namespace WpfApplication1
     /// </summary>
     public partial class Report1 : Window
     {
+
+        DataTable table; 
+
         public Report1()
         {
             InitializeComponent();
@@ -42,6 +46,27 @@ namespace WpfApplication1
             ShowDocument show = new ShowDocument();
             show.filename = System.IO.Directory.GetCurrentDirectory() + "/temp/ME1.docx";
             show.Show();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+           table = new DataTable();
+           table.Columns.Add("C0", typeof(String));
+           table.Columns.Add("C1", typeof(String));
+           table.Columns.Add("C2", typeof(String));
+           table.Columns.Add("C3", typeof(String));
+           table.Columns.Add("C4", typeof(String));
+           table.Columns.Add("C5", typeof(String));
+
+
+
+           ForTFOMS.ItemsSource = table.DefaultView;
+
+
+           table.Rows.Add("ddddddddddddddddddddddddddddddd", "1", "2", "3", "4", "5");
+
+
+
         }
     }
 }
