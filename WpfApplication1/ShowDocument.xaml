@@ -15,6 +15,6 @@
                 <Button Name="Save" Width="150" Content="Сохрать отчет" Margin="5 5 5 5" ></Button>
             </StackPanel>
         </Border>
-        <FlowDocumentReader Grid.Row="1" x:Name="flowDocumentReader" ViewingMode="Page" />
+        <DocumentViewer Grid.Row="1" Name="DocViewXps"  Height="auto"> </DocumentViewer>
     </Grid>
 </Window>

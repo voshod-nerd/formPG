@@ -24,7 +24,8 @@ namespace WpfApplication1
     public partial class ShowDocument : Window
     {
 
-       public string filename { get; set; }
+       public string filenameDocx { get; set; }
+       public string filenameXps { get; set; }
  
 
         public ShowDocument()
@@ -35,14 +36,8 @@ namespace WpfApplication1
 
         private void ReadDocx()
         {
-            string path = this.filename;
-            using (var stream = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-            {
-                var flowDocumentConverter = new DocxToFlowDocumentConverter(stream);
-                flowDocumentConverter.Read();
-                this.flowDocumentReader.Document = flowDocumentConverter.Document;
-                this.Title = System.IO.Path.GetFileName(path);
-            }
+            string path = filenameDocx;
+         
         }
 
         private void Print_Click(object sender, RoutedEventArgs e)
@@ -52,7 +47,7 @@ namespace WpfApplication1
             PrintDialog dialog = new PrintDialog();
             if (dialog.ShowDialog() == true)
             {
-               // dialog.PrintVisual(canvas, "Распечатываем элемент Canvas");
+              
             }
 
         }
