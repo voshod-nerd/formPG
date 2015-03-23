@@ -16,6 +16,7 @@ using System.Text.RegularExpressions;
 
 
 
+
 namespace WpfApplication1
 {
     /// <summary>
@@ -31,6 +32,7 @@ namespace WpfApplication1
         public ShowDocument()
         {
             InitializeComponent();
+
         }
 
 
@@ -50,6 +52,19 @@ namespace WpfApplication1
               
             }
 
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.filenameXps))
+            {
+                pdfViewer.LoadFile(this.filenameXps);
+            }
         }
     }
 }

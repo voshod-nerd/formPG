@@ -41,5 +41,9 @@ C:\ForGit\formPG\WpfApplication1\obj\x86\Release\GenerateResource.write.1.tlog
 C:\ForGit\formPG\WpfApplication1\obj\x86\Release\WpfApplication1.exe
 C:\ForGit\formPG\WpfApplication1\obj\x86\Release\WpfApplication1.pdb
 C:\ForGit\formPG\WpfApplication1\obj\x86\Release\Interop.LCC11.dll
-C:\ForGit\formPG\WpfApplication1\obj\x86\Release\Interop.Microsoft.Office.Core.dll
 C:\ForGit\formPG\WpfApplication1\obj\x86\Release\WpfApplication1.csproj.ResolveComReference.cache
+C:\ForGit\formPG\WpfApplication1\bin\Release\Spire.License.dll
+C:\ForGit\formPG\WpfApplication1\bin\Release\Spire.Doc.dll
+C:\ForGit\formPG\WpfApplication1\bin\Release\Spire.Pdf.dll
+C:\ForGit\formPG\WpfApplication1\bin\Release\AxInterop.AcroPDFLib.dll
+C:\ForGit\formPG\WpfApplication1\bin\Release\WPFPdfViewer.dll

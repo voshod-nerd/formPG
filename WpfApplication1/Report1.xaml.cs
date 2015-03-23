@@ -13,9 +13,11 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Data;
 using System.Web;
+using Spire.License;
+using Spire.Pdf;
+using Spire.Doc;
 
-using Word = Microsoft.Office.Interop.Word;
-using Microsoft.Office.Interop.Word;
+
 
 
 
@@ -26,9 +28,6 @@ namespace WpfApplication1
     /// </summary>
     public partial class Report1 : System.Windows.Window
     {
-
-       
-        
 
         DataTable table; 
 
@@ -50,48 +49,19 @@ namespace WpfApplication1
 
             ExportToDocx r = new ExportToDocx();
             r.InputDataMek(dic,"ME1.docx");
-            //
+            
             ShowDocument show = new ShowDocument();
             show.filenameDocx = System.IO.Directory.GetCurrentDirectory() + "/temp/ME1.docx";
 
-            /* Convert to Xps */
-            Convert(System.IO.Directory.GetCurrentDirectory() + "/temp/ME1.docx", System.IO.Directory.GetCurrentDirectory() + "/temp/ME1.xps", WdSaveFormat.wdFormatXPS);
-
-            // the show files
+            /////* Convert to pdf *///
+            string filePDF = System.IO.Directory.GetCurrentDirectory() + "/temp/ME1.docx";
+            Document doc = new Document(filePDF);
+            /////convert to xps file.
+            doc.SaveToFile(System.IO.Directory.GetCurrentDirectory() + "/temp/ME1.pdf", Spire.Doc.FileFormat.PDF);
+            show.filenameXps = System.IO.Directory.GetCurrentDirectory() + "/temp/ME1.pdf";
+            ///// the show files
             show.Show();
         }
-
-
-
-         public static void Convert(string input, string output, WdSaveFormat format)
-        {
-            // Create an instance of Word.exe
-            Word._Application oWord = new Word.Application();
- 
-            // Make this instance of word invisible (Can still see it in the taskmgr).
-            oWord.Visible = false;
- 
-            // Interop requires objects.
-            object oMissing = System.Reflection.Missing.Value;
-            object isVisible = true;
-            object readOnly = false;
-            object oInput = input;
-            object oOutput = output;
-            object oFormat = format;
- 
-            // Load a document into our instance of word.exe
-            Word._Document oDoc = oWord.Documents.Open(ref oInput, ref oMissing, ref readOnly, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref isVisible, ref oMissing, ref oMissing );
-           
-            // Make this document the active document.
-            oDoc.Activate();
- 
-            // Save this document in Word 2003 format.
-            oDoc.SaveAs(ref oOutput, ref oFormat, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing);
-            
-            // Always close Word.exe.
-            oWord.Quit(ref oMissing, ref oMissing, ref oMissing);
-        }
-    
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

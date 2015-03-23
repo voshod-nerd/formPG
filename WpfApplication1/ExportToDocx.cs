@@ -23,8 +23,9 @@ namespace WpfApplication1
              
             } else {Directory.CreateDirectory(dir); }  
 
-           string report=Directory.GetCurrentDirectory()+"\\"+filename;
-           File.Copy(report,dir+"\\"+filename);
+           string report=dir+"\\"+filename;
+
+           File.Copy(Directory.GetCurrentDirectory() + "\\report\\" + filename, report);
             return  dir+"\\"+filename;
         }
         
